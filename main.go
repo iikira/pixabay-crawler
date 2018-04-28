@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/iikira/BaiduPCS-Go/downloader"
+	"github.com/iikira/BaiduPCS-Go/requester/downloader"
 	"github.com/iikira/pixabay-cralwer/pixabay"
 	"log"
+	"os"
 )
 
 func main() {
@@ -24,23 +25,34 @@ func main() {
 	for k := range pis {
 		filename := pis[k].Filename()
 		fmt.Printf("[%d] %s\n", k, filename)
-		der, err := downloader.NewDownloader(pis[k].ImageURL, downloader.Config{
-			Client:    p.Client,
-			SavePath:  "out/" + filename,
-			Parallel:  10,
-			CacheSize: 2048,
+
+		_, err := os.Stat(filename)
+		if err == nil {
+			fmt.Printf("[%d] 已存在\n", k)
+			continue
+		}
+
+		if os.IsExist(err) {
+			fmt.Printf("[%d] error: %s\n", k, err)
+			continue
+		}
+
+		savePath := "out/" + filename
+		file, err := os.OpenFile(savePath, os.O_CREATE|os.O_WRONLY, 0644)
+		if err != nil {
+			fmt.Printf("[%d] error: %s\n", k, err)
+			continue
+		}
+
+		der := downloader.NewDownloader(pis[k].ImageURL, file, &downloader.Config{
+			MaxParallel: 10,
+			CacheSize:   20480,
 		})
+
+		err = der.Execute()
 		if err != nil {
 			fmt.Printf("[%d] error: %s\n", k, err)
 			continue
 		}
-
-		done, err := der.Execute()
-		if err != nil {
-			fmt.Printf("[%d] error: %s\n", k, err)
-			continue
-		}
-
-		<-done
 	}
 }
