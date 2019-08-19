@@ -1,0 +1,36 @@
+# github.com/fatih/color v1.7.0
+github.com/fatih/color
+# github.com/iikira/Baidu-Login v0.0.0-20180427090606-ecf146973528
+github.com/iikira/Baidu-Login/bdcrypto
+github.com/iikira/Baidu-Login/bdcrypto/ecb
+# github.com/iikira/BaiduPCS-Go v0.0.0-20190818140211-a33d0f025200
+github.com/iikira/BaiduPCS-Go/requester/downloader
+github.com/iikira/BaiduPCS-Go/requester
+github.com/iikira/BaiduPCS-Go/baidupcs/expires
+github.com/iikira/BaiduPCS-Go/pcstable
+github.com/iikira/BaiduPCS-Go/pcsutil
+github.com/iikira/BaiduPCS-Go/pcsutil/converter
+github.com/iikira/BaiduPCS-Go/pcsutil/waitgroup
+github.com/iikira/BaiduPCS-Go/pcsverbose
+github.com/iikira/BaiduPCS-Go/requester/downloader/cachepool
+github.com/iikira/BaiduPCS-Go/requester/rio/speeds
+github.com/iikira/BaiduPCS-Go/requester/rio
+github.com/iikira/BaiduPCS-Go/pcsutil/pcstime
+# github.com/json-iterator/go v1.1.7
+github.com/json-iterator/go
+# github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
+github.com/kardianos/osext
+# github.com/mattn/go-colorable v0.1.2
+github.com/mattn/go-colorable
+# github.com/mattn/go-isatty v0.0.9
+github.com/mattn/go-isatty
+# github.com/mattn/go-runewidth v0.0.4
+github.com/mattn/go-runewidth
+# github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+github.com/modern-go/concurrent
+# github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742
+github.com/modern-go/reflect2
+# github.com/olekukonko/tablewriter v0.0.1
+github.com/olekukonko/tablewriter
+# golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
+golang.org/x/sys/unix

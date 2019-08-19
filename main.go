@@ -1,12 +1,22 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"github.com/iikira/BaiduPCS-Go/requester/downloader"
-	"github.com/iikira/pixabay-cralwer/pixabay"
+	"github.com/iikira/pixabay-crawler/pixabay"
 	"log"
 	"os"
 )
+
+var (
+	page int
+)
+
+func init() {
+	flag.IntVar(&page, "p", 1, "page of photo")
+	flag.Parse()
+}
 
 func main() {
 	p := pixabay.NewPixabay()
@@ -15,7 +25,7 @@ func main() {
 		ImageType: "photo",
 		Category:  "nature",
 		Order:     "popular",
-		Page:      2,
+		Page:      page,
 		PerPage:   200,
 	})
 	if err != nil {
@@ -26,7 +36,8 @@ func main() {
 		filename := pis[k].Filename()
 		fmt.Printf("[%d] %s\n", k, filename)
 
-		_, err := os.Stat(filename)
+		savePath := "out/" + filename
+		_, err := os.Stat(savePath)
 		if err == nil {
 			fmt.Printf("[%d] 已存在\n", k)
 			continue
@@ -37,7 +48,6 @@ func main() {
 			continue
 		}
 
-		savePath := "out/" + filename
 		file, err := os.OpenFile(savePath, os.O_CREATE|os.O_WRONLY, 0644)
 		if err != nil {
 			fmt.Printf("[%d] error: %s\n", k, err)
@@ -45,7 +55,7 @@ func main() {
 		}
 
 		der := downloader.NewDownloader(pis[k].ImageURL, file, &downloader.Config{
-			MaxParallel: 10,
+			MaxParallel: 1,
 			CacheSize:   20480,
 		})
 

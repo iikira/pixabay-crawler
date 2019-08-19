@@ -19,3 +19,4 @@ pixabay-crawler
 out/
 *.jpg
 *.png
+/pixabay-crawler
