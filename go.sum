@@ -12,6 +12,8 @@ github.com/iikira/Baidu-Login v0.0.0-20180427090606-ecf146973528 h1:WaZCDfR+C0z1
 github.com/iikira/Baidu-Login v0.0.0-20180427090606-ecf146973528/go.mod h1:oMWxZOoEMgQG+0rq8xhEIdxvXwkyG4aN3sZoOQ59R4Q=
 github.com/iikira/BaiduPCS-Go v0.0.0-20190818140211-a33d0f025200 h1:Z4P/LV2ALgNx/hlAqX7PbzsBB0FM526TR/YqJRmPeYc=
 github.com/iikira/BaiduPCS-Go v0.0.0-20190818140211-a33d0f025200/go.mod h1:rCbH9E3nWcEQTWuvonUm/Wr4JTPfTu001WolzE9pucA=
+github.com/iikira/BaiduPCS-Go v0.0.0-20190823021624-0331ad15e685 h1:HE9sKTb0J06b4MIgsT5jDIAt2aZIkAXE+0BacPwB9p4=
+github.com/iikira/BaiduPCS-Go v0.0.0-20190823021624-0331ad15e685/go.mod h1:rCbH9E3nWcEQTWuvonUm/Wr4JTPfTu001WolzE9pucA=
 github.com/iikira/baidu-tools v0.0.0-20180922000818-79c93d8033cd/go.mod h1:UHD1R9RGXz5nDsKm3KbdD3yxCJZ18nmR+1ZAc5GkrNw=
 github.com/iikira/pixabay-cralwer v0.0.0-20180428155559-b0d9ace80b71 h1:igfM4ak6D9uCjfULnTT1R6FAeQMM4h4naVCEnFMqLxQ=
 github.com/iikira/pixabay-cralwer v0.0.0-20180428155559-b0d9ace80b71/go.mod h1:nNhEMvdPtAwKcVPElAJcEUH7vOn2tG/l0t/8N5rDyxE=

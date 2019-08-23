@@ -3,7 +3,7 @@ github.com/fatih/color
 # github.com/iikira/Baidu-Login v0.0.0-20180427090606-ecf146973528
 github.com/iikira/Baidu-Login/bdcrypto
 github.com/iikira/Baidu-Login/bdcrypto/ecb
-# github.com/iikira/BaiduPCS-Go v0.0.0-20190818140211-a33d0f025200
+# github.com/iikira/BaiduPCS-Go v0.0.0-20190823021624-0331ad15e685
 github.com/iikira/BaiduPCS-Go/requester/downloader
 github.com/iikira/BaiduPCS-Go/requester
 github.com/iikira/BaiduPCS-Go/baidupcs/expires
